@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    text-decoration-color: white;
+}
+
+nav {
+    background-color: red;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a.active {
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active:hover {
+    background-color: brown;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    float: right;
+    color: black;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+a.wrapper {
+    border-radius: .25rem;
+    width: 100%;
+    height: auto;
+}
+
+.imgcontainer {
+    border: 1px black solid;
+    margin-bottom: 10px;
+    float: left;
+    overflow: hidden;
+    width: 50%;
+    height: 250px;
+    padding-bottom: 0px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img {
+    height: 250px;
+}
+
+.imagetext {
+    line-height: 30px;
+    border: 1px black solid;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    float: right;
+    width: 50%;
+    height: 250px;
+}
+
+input {
+    display: inline-block;
+    margin: 0 auto;
+    padding: .2rem;
+    margin: 5px;
+    width: 80%;
+    border: 50% 50%;
+}
+
+button {
+    display: inline-block;
+    padding: .2rem;
+    margin: 5px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+@media (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.774);
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a.active {
+        font-size: 20px;
+        color: red;
+    }
+    a.active:hover {
+        background: none;
+        color: rgba(0, 0, 255, 0.945);
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}

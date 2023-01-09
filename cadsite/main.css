@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    text-decoration-color: white;
+}
+
+nav {
+    background-color: red;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+.checkbtn {
+    display: none;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a.active {
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.upfield {
+    padding: 7px 13px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+}
+
+.upfield:hover {
+    background-color: brown;
+    transition: .5s;
+}
+
+a.active:hover {
+    background-color: brown;
+    transition: .5s;
+}
+
+#check {
+    display: none;
+}
+
+.gallery-links {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: xx-large;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+a.img {
+    --padding: 1rem;
+    border: 1px solid #777;
+    border-radius: .25rem;
+    display: block;
+    width: 100%;
+    min-height: 350px;
+}
+
+.img2 {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    padding: 0;
+    padding-bottom: 0;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.imagetext {
+    margin-top: .5rem;
+    padding: var(--padding);
+}
+
+.gallery-upload {
+    padding: .5rem;
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+    height: auto;
+    width: 1000px;
+    background-color: rgba(119, 119, 119, 0.993);
+    position: relative;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+form {
+    padding: .2rem;
+}
+
+.input1 {
+    display: inline-block;
+    margin: 0 auto;
+    padding: .2rem;
+    margin: 5px;
+    width: 90%;
+    border: 50% 50%;
+}
+
+.input2 {
+    display: inline-block;
+    margin: 0 auto;
+    padding: .2rem;
+    margin: 5px;
+    width: 80%;
+}
+
+#image_upload {
+    display: inline-block;
+    margin: 0 auto;
+    padding: .2rem;
+    margin: 5px;
+    width: 90%;
+    border: 50% 50%;
+}
+
+.button {
+    display: inline-block;
+    padding: .2rem;
+    margin: 5px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.instructions {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    outline: none;
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
+
+.tooltiptext {
+    height: auto;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    position: relative;
+}
+
+@media (max-width:820px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a.active {
+        font-size: 17px;
+    }
+    .gallery-upload {
+        width: auto;
+    }
+}
+
+@media (max-width:620px) {
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.774);
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .checkbtn {
+        display: block;
+        font-size: 30px;
+        float: right;
+        color: black;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    .upfield {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 20px;
+        color: red;
+    }
+    nav ul li a.active {
+        font-size: 20px;
+        color: red;
+    }
+    a.active:hover {
+        background: none;
+        color: rgba(0, 0, 255, 0.945);
+    }
+    .upfield:hover {
+        background: none;
+        color: rgba(0, 0, 255, 0.945);
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    .gallery-upload {
+        width: auto;
+        height: auto;
+    }
+}
